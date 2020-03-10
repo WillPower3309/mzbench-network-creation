@@ -38,13 +38,7 @@ def initial_state():
 
 
 def metrics():
-    return [
-        [
-            ('successful_calls', 'counter'),
-            ('failed_calls', 'counter'),
-            ('skipped_calls', 'counter')
-        ]
-    ]
+    return []
 
 
 ####################################
