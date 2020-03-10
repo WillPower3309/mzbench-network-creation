@@ -20,7 +20,7 @@
 ####################################
 
 
-import os
+from .network_lib import NetworkModel
 
 
 ####################################
@@ -53,5 +53,5 @@ def metrics():
 
 
 def setup_networks(domain):
-    print("hitting setup networks")
-    pass
+    # create network model
+    network_model = NetworkModel(domain)
