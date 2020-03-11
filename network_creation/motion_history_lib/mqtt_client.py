@@ -1,3 +1,5 @@
+# coding=utf-8
+
 #!/usr/bin/env python
 #
 # Description:  Simple MQTT client specifically for communicating with Halo Core.
