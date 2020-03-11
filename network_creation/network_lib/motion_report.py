@@ -22,7 +22,6 @@
 
 import time
 import json
-import os
 import paho.mqtt.client as mqtt
 
 
@@ -65,11 +64,21 @@ def send_motion_report(network_model, report_data, domain):
 
 
 def send_report(network_model, domain):
-    motion_report_data = None
-    os.system('pwd')
-    with open("./network_lib/live_data.json") as json_file:
-        motion_report_data = json.load(json_file)
-    time.sleep(2)
+    motion_report_data = {
+        "ts": 0,
+        "links": ["4C724010FD.4C72401124","4C72401124.4C724010FD"],
+        "data": {
+            "lraw": [0,0],
+            "mkai": [0,0],
+            "throughput": [1,1]
+        },
+        "loc": ["nomotion"],
+        "interval": 500,
+        "count": 1,
+        "motion_tripped": 1,
+        "last_motion": 1580935867.31,
+        "motion_enabled": 0
+    }
 
     while 1:
         motion_report_data["ts"] = time.time()
