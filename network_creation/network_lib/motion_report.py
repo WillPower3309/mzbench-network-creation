@@ -93,6 +93,8 @@ def send_motion_report(network_model, domain):
         ))
         if msg_info.rc != 0:
             print("ERROR: Failed to send mock live data")
+        else:
+            print("send report")
 
     client.loop_stop()
     client.disconnect()
