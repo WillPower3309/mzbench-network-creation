@@ -57,4 +57,4 @@ def setup_networks(domain):
 
     # publish mock live data
     while 1:
-        motion_report.send_report(network_model, domain)
+        motion_report.send_motion_report(network_model, domain)
