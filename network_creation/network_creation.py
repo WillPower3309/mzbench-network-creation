@@ -20,7 +20,9 @@
 ####################################
 
 
+import network_lib.motion_report as motion_report
 from network_lib import NetworkModel
+from motion_history_lib import generate_history
 
 
 ####################################
@@ -49,3 +51,10 @@ def metrics():
 def setup_networks(domain):
     # create network model
     network_model = NetworkModel(domain)
+
+    # generate mock network motion history
+    generate_history(domain, network_model)
+
+    # publish mock live data
+    while 1:
+        motion_report.send_report(network_model, domain)
