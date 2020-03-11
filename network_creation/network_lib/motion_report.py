@@ -91,5 +91,7 @@ def send_report(network_model, domain):
         if not result:
             print("ERROR: Report Not Sent")
             return
+        else:
+            print("Report sent")
 
         time.sleep(1)
