@@ -20,7 +20,7 @@
 ####################################
 
 
-from .network_lib import NetworkModel
+from network_lib import NetworkModel
 
 
 ####################################
