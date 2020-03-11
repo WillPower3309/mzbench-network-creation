@@ -21,9 +21,8 @@
 
 
 import time
-import random
 import json
-
+import os
 import paho.mqtt.client as mqtt
 
 
@@ -67,8 +66,8 @@ def send_motion_report(network_model, report_data, domain):
 
 def send_report(network_model, domain):
     motion_report_data = None
-
-    with open("network_lib/live_data.json") as json_file:
+    os.system('ls')
+    with open("./network_lib/live_data.json") as json_file:
         motion_report_data = json.load(json_file)
     time.sleep(2)
 
