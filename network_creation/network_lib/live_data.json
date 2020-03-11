@@ -1,0 +1,15 @@
+{
+    "ts": 1580935881.29,
+    "links": ["4C724010FD.4C72401124","4C72401124.4C724010FD"],
+    "data": {
+        "lraw": [0,0],
+        "mkai": [0,0],
+        "throughput": [1,1]
+    },
+    "loc": ["nomotion"],
+    "interval": 500,
+    "count": 1,
+    "motion_tripped": 1,
+    "last_motion": 1580935867.31,
+    "motion_enabled": 0
+}
